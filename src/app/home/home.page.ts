@@ -95,7 +95,8 @@ export class HomePage {
   async borrarRestaurante(r: Restaurante) {
     const alert = await this.alertCtrl.create({
       header: 'Confirmar borrado',
-      message: `¿Deseas borrar el restaurante <strong>${r.documentName}</strong>?`,
+      subHeader: `¿Deseas borrar el restaurante ${r.documentName}?`,
+      message: `Este proceso es irreversible`,
       buttons: [
         { text: 'Cancelar', role: 'cancel' },
         {
